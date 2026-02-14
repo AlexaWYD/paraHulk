@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Riky 💖</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#638dff 0%,#0ac495 50%,#2cec5c 100%); z-index:10;
+    font-family:'Segoe UI', sans-serif;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Tarjeta */
+.card{
+    background:#eeeaea;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(255, 255, 255, 0.2);
+    width:350px;
+    box-shadow:0 0 30px rgba(0, 255, 0, 0.4);
+    position:relative;
+    z-index:2;
+}
+
+/* Título */
+h1{
+    color:#e91e63;
+}
+
+/* BOTÓN CORAZÓN */
+.heart-btn{
+    margin:25px auto;
+    width:70px;
+    height:70px;
+    background:red;
+    position:relative;
+    transform:rotate(-45deg);
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Imágenes flotantes */
+.float-img{
+    position:absolute;
+    bottom:-150px;
+    width:80px;   /* tamaño de las imágenes flotando */
+    opacity:0.8;
+    animation: floatUp linear infinite;
+    z-index:0;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    10%{
+        opacity:0.8;
+    }
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+.heart-btn::before,
+.heart-btn::after{
+    content:"";
+    width:70px;
+    height:70px;
+    background:red;
+    border-radius:50%;
+    position:absolute;
+}
+
+.heart-btn::before{
+    top:-35px;
+    left:0;
+}
+
+.heart-btn::after{
+    left:35px;
+    top:0;
+}
+
+.heart-btn:hover{
+    transform:rotate(-45deg) scale(1.2);
+}
+
+.heart-btn:focus{
+    outline:none;
+}
+
+p{
+    color:#555;
+}
+
+/* ELEMENTOS FLOTANTES */
+.float{
+    position:absolute;
+    bottom:-30px;
+    font-size:22px;
+    animation: subir linear infinite;
+    opacity:0.8;
+}
+
+@keyframes subir{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Feliz San Valentín 💕</h1>
+    <p>Mi querido Riky</p>
+    <p>Gracias por hacer mis días más felices.</p>
+
+    <button class="heart-btn" onclick="window.location.href='carta.html'"></button>
+
+    <p>Haz clic en mi corazón ❤️</p>
+</div>
+
+<!-- Corazones -->
+<span class="float" style="left:5%; animation-duration:6s;">❤️</span>
+<span class="float" style="left:20%; animation-duration:8s;">💖</span>
+<span class="float" style="left:35%; animation-duration:7s;">💘</span>
+<span class="float" style="left:50%; animation-duration:9s;">💗</span>
+<span class="float" style="left:65%; animation-duration:6s;">💞</span>
+<span class="float" style="left:80%; animation-duration:8s;">❤️</span>
+
+<img src="img/alexa1.png" class="float-img" style="left:5%; animation-duration:8s;">
+<img src="img/alexa2.png" class="float-img" style="left:25%; animation-duration:10s;">
+<img src="img/alexa3.png" class="float-img" style="left:60%; animation-duration:7s;">
+<img src="img/alexa4.png" class="float-img" style="left:80%; animation-duration:9s;">
+<img src="img/alexa1.png" class="float-img" style="left:5%; animation-duration:7s;">
+<img src="img/alexa2.png" class="float-img" style="left:25%; animation-duration:8s;">
+<img src="img/alexa3.png" class="float-img" style="left:60%; animation-duration:5s;">
+<img src="img/alexa4.png" class="float-img" style="left:80%; animation-duration:6s;">
+
+
+
+<!-- Elementos de programación -->
+<span class="float" style="left:10%; animation-duration:10s; color:#ffffff;">&lt;love&gt;</span>
+<span class="float" style="left:30%; animation-duration:12s; color:#ffffff;">{ }</span>
+<span class="float" style="left:45%; animation-duration:9s; color:#ffffff;">const</span>
+<span class="float" style="left:60%; animation-duration:11s; color:#ffffff;">function()</span>
+<span class="float" style="left:75%; animation-duration:13s; color:#ffffff;">&lt;/forever&gt;</span>
+<span class="float" style="left:10%; animation-duration:10s; color:#ffffff;">&lt;love&gt;</span>
+<span class="float" style="left:30%; animation-duration:12s; color:#ffffff;">{ }</span>
+<span class="float" style="left:45%; animation-duration:9s; color:#ffffff;">const</span>
+<span class="float" style="left:60%; animation-duration:11s; color:#ffffff;">function()</span>
+<span class="float" style="left:75%; animation-duration:13s; color:#ffffff;">&lt;/forever&gt;</span>
+
+</body>
+</html>

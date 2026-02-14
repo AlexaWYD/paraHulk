@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta 💖</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+     background:linear-gradient(180deg,#01fa54 0%,#0ac495 50%,#009225 100%); z-index:10;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Consolas, monospace;
+    overflow:hidden;
+    position:relative;
+    color:#ffffff;
+}
+
+/* Carta estilo editor */
+.carta{
+    background:#2d2d2d;
+    padding:50px;
+    border-radius:15px;
+    width:700px;
+    max-width:90%;
+    box-shadow:0 0 30px rgba(2, 255, 14, 0.4);
+    position:relative;
+    z-index:2;
+    line-height:1.6;
+    font-size:16px;
+}
+
+/* Colores tipo código */
+.tag{ color:#569cd6; }
+.string{ color:#ce9178; }
+.comment{ color:#6a9955; }
+.keyword{ color:#c586c0; }
+
+/* Corazones flotando */
+.heart{
+    position: absolute;
+    bottom: -30px;
+    font-size: 25px;
+    animation: subir linear infinite;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* Imágenes flotantes */
+.float-img{
+    position: absolute;
+    width: 110px;
+    pointer-events: none;
+    animation: subir linear forwards;
+    z-index: 1;
+}
+
+/* Animación */
+@keyframes subir{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+/* ELEMENTOS FLOTANTES */
+.float{
+    position:absolute;
+    bottom:-30px;
+    font-size:22px;
+    animation: subir linear infinite;
+    opacity:0.8;
+}
+
+@keyframes subir{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="carta">
+
+<span class="comment">// Archivo: Pa' mi moleno.js</span><br><br>
+
+<span class="keyword">const</span> <span class="tag">Riky</span> = {<br>
+&nbsp;&nbsp;nombre: <span class="string">"El amor de mi vida"</span>,<br>
+&nbsp;&nbsp;sanValentines: <span class="string">"3 juntos 💖"</span>,<br>
+&nbsp;&nbsp;estado: <span class="string">"Mi persona favorita"</span><br>
+};<br><br>
+
+<span class="keyword">function</span> <span class="tag">cartaDeAmor</span>() {<br>
+&nbsp;&nbsp;<span class="string">"Hoy es un día más, pero este tiene algo que lo hace un poquito más especial."</span>;<br>
+&nbsp;&nbsp;<span class="string">"Poder seguir a tu lado riendo y compartiendo momentos juntos me hace feliz."</span>;<br>
+&nbsp;&nbsp;<span class="string">"Pensaba que ya estaríamos juntos presencialmente, pero Dios tiene sus tiempos perfectos."</span>;<br>
+&nbsp;&nbsp;<span class="string">"Quise aprender HTML porque mi novio es programador y quería sorprenderlo."</span>;<br>
+&nbsp;&nbsp;<span class="string">"Sí, hice trampa esta vez… pero la próxima lo haré sola."</span>;<br>
+&nbsp;&nbsp;<span class="string">"Te amo mucho. Gracias por estar conmigo."</span>;<br>
+}<br><br>
+
+<span class="comment">// Si la distancia existe...</span><br>
+<span class="keyword">if</span>(distance == true) {<br>
+&nbsp;&nbsp;love++; 💕<br>
+}<br><br>
+
+<span class="comment">// Amor infinito</span><br>
+<span class="keyword">while</span>(true) {<br>
+&nbsp;&nbsp;<span class="tag">amarte</span>(); 💖<br>
+}<br><br>
+
+<span class="keyword">return</span> <span class="string">"Siempre tuya 💍"</span>;<br><br>
+
+<span class="comment">// Ejecutando amor eterno...</span><br>
+<span class="tag">cartaDeAmor</span>(); 💘
+
+</div>
+
+<script>
+
+const imagenes = [
+    
+    "img/enamorado_1.png",
+    "img/alexa3.png",
+    "img/enamorado_3.png",
+    "img/enamorado_4.png",
+    "img/alexa1.png"
+];
+
+
+function crearImagenFlotante() {
+    const img = document.createElement("img");
+    img.src = imagenes[Math.floor(Math.random() * imagenes.length)];
+    img.classList.add("float-img");
+
+    img.style.left = Math.random() * 100 + "vw";
+    img.style.bottom = "-120px";
+    img.style.animationDuration = (8 + Math.random() * 9) + "s";
+
+    document.body.appendChild(img);
+
+    setTimeout(() => {
+        img.remove();
+    }, 13000);
+}
+
+setInterval(crearImagenFlotante, 1800);
+</script>
+
+<!-- Corazones flotando -->
+<span class="heart" style="left:10%; animation-duration:6s;">❤️</span>
+<span class="heart" style="left:25%; animation-duration:8s;">💖</span>
+<span class="heart" style="left:40%; animation-duration:7s;">💘</span>
+<span class="heart" style="left:55%; animation-duration:9s;">💗</span>
+<span class="heart" style="left:70%; animation-duration:6s;">💞</span>
+<span class="heart" style="left:85%; animation-duration:8s;">❤️</span>
+
+<!-- Elementos de programación -->
+<span class="float" style="left:10%; animation-duration:10s; color:#ffffff;">&lt;love&gt;</span>
+<span class="float" style="left:30%; animation-duration:12s; color:#ffffff;">{ }</span>
+<span class="float" style="left:45%; animation-duration:9s; color:#ffffff;">const</span>
+<span class="float" style="left:60%; animation-duration:11s; color:#ffffff;">function()</span>
+<span class="float" style="left:75%; animation-duration:13s; color:#ffffff;">&lt;/forever&gt;</span>
+<span class="float" style="left:10%; animation-duration:10s; color:#ffffff;">&lt;love&gt;</span>
+<span class="float" style="left:30%; animation-duration:12s; color:#ffffff;">{ }</span>
+<span class="float" style="left:45%; animation-duration:9s; color:#ffffff;">const</span>
+<span class="float" style="left:60%; animation-duration:11s; color:#ffffff;">function()</span>
+<span class="float" style="left:75%; animation-duration:13s; color:#ffffff;">&lt;/forever&gt;</span>
+
+</body>
+</html>
